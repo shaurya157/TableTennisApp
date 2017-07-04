@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20170704024240) do
   enable_extension "plpgsql"
 
   create_table "companies", force: :cascade do |t|
+    t.integer "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
