@@ -6,7 +6,7 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  has_many :followers, through: :user_follows, source: :follower
+  has_many :reservations
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
